@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Setup</title>
+<link rel="stylesheet" href="profile-setup.css">
+<style>
+  /* Additional CSS to style the anchor tag */
+  .default-avatar-text a {
+    color: inherit; /* Inherit the color from the parent element */
+    text-decoration: none; /* Add underline */
+  }
+  .or-return-text {
+    display: none; /* Initially hide the text */
+    color: whitesmoke; /* Set text color */
+    font-weight: bold; /* Bold font */
+  }
+</style>
+</head>
+<body>
+<div class="profile-setup-container">
+  <div class="logo">dribbble</div>
+  <button class="redirect-button" onclick="goToPreviousPage()"><</button>
+  <h1>Welcome! Let’s create your profile.</h1>
+  <p class="intro-text">Let others get to know you better! You can do these later.</p>
+  <div class="avatar-section">
+    <p class="add-avatar-text">Add an avatar</p>
+    <div class="avatar-placeholder">
+      <!-- Hidden file input for image upload -->
+      <input type="file" id="avatar-upload" name="avatar" accept="image/*" style="display: none;" multiple="false">
+    </div>
+    <!-- Label for the hidden file input -->
+    <label for="avatar-upload" class="choose-image-btn">Choose image</label>
+    <p class="default-avatar-text"><a href="https://unsplash.com/" target="_blank">> Or choose one of our defaults</a></p>
+  </div>
+  
+  <div class="location-section">
+    <label for="location">Add your location</label>
+    <br>
+    <input type="text" id="location" name="location" placeholder="Enter your location">
+  </div>
+  
+  <!-- Form to navigate to the interests page on button click -->
+  <form action="interests.html" method="get" onsubmit="return validateForm()">
+    <button type="submit" class="next-button">Next</button>
+  </form>
+  
+  <!-- Text for "or press RETURN" -->
+
+<p id="or-return-text" class="or-return-text" onclick="goToPreviousPage()">or press RETURN</p>
+</div>
+
+<script>
+  document.getElementById('avatar-upload').addEventListener('change', function() {
+  if (this.files && this.files[0]) {
+    var img = document.createElement('img');
+    img.id = 'avatar-display';
+    img.src = URL.createObjectURL(this.files[0]);
+    img.style.width = '100%'; // Set width to 100% to fill the circle
+    img.style.height = '100%'; // Set height to 100% to fill the circle
+    img.style.borderRadius = '50%';
+    img.style.objectFit = 'cover'; // Ensure the image covers the entire circle
+    img.onload = function() {
+      URL.revokeObjectURL(img.src); // Free memory
+    }
+    document.querySelector('.avatar-placeholder').appendChild(img);
+    
+    // Show the "or press RETURN" text
+    document.querySelector('.or-return-text').style.display = 'block';
+  }
+});
+
+  document.querySelector('.choose-image-btn').addEventListener('click', function() {
+    var fileInput = document.getElementById('avatar-upload');
+    if (fileInput.files.length > 0) {
+      alert('Only one image can be selected.');
+      event.preventDefault(); 
+    }
+  });
+  
+  function validateForm() {
+    var fileInput = document.getElementById('avatar-upload');
+    if (fileInput.files.length === 0) {
+      alert('You must select an avatar before proceeding.');
+      return false; // Prevent form submission
+    }
+    return true; // Allow form submission
+  }
+  
+
+function goToPreviousPage() {
+  window.location.href = 'account-creation.html'; // Navigate to the previous page
+}
+
+  function goToNextPage() {
+    var selectedAvatar = document.getElementById('avatar-display');
+    if (selectedAvatar) {
+      var imageURL = selectedAvatar.src;
+      window.location.href = 'email-validation.html?profileImg=' + encodeURIComponent(imageURL);
+    } else {
+      alert('You must select an avatar before proceeding.');
+    }
+  }
+
+
+
+</script>
+  
+</body>
+</html>

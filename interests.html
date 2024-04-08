@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interests Selection</title>
+<link rel="stylesheet" href="interests.css">
+</head>
+<body>
+<div class="interests-container">
+  <div class="header">
+    <div class="logo">dribbble</div>
+    <button class="redirect-button" onclick="goToPreviousPage()"><</button>
+    <h1>What brings you to Dribbble?</h1>
+    <p>Select the options that best describe you. Don’t worry; you can explore other options later.</p>
+  </div>
+  <div class="options">
+    <!-- Option 1 -->
+    <div class="option">
+      <input type="radio" id="designer" name="interest" value="designer">
+      <label for="designer">
+        <img src="C:\Users\anura\OneDrive\Desktop\replica\images\designer3.png" alt="Designer Icon">
+        <span>I’m a designer looking to share my work.</span>
+        <small>With over 7 million shots from vast community of designers, Dribbble is the leading source for design inspiration</small>
+        <div class="checkbox"></div>
+      </label>
+    </div>
+    <!-- Option 2 -->
+    <div class="option">
+      <input type="radio" id="hire" name="interest" value="hire">
+      <label for="hire">
+        <img src="C:\Users\anura\OneDrive\Desktop\replica\images\designer2.jpg" alt="Hire Icon">
+        <span>I’m looking to hire a designer.</span>
+        <small>With over 7 million shots from vast community of designers, Dribbble is the leading source for design inspiration</small>
+        <div class="checkbox"></div>
+      </label>
+    </div>
+    <!-- Option 3 -->
+    <div class="option">
+      <input type="radio" id="inspiration" name="interest" value="inspiration">
+      <label for="inspiration">
+        <img src="C:\Users\anura\OneDrive\Desktop\replica\images\designer4.png" alt="Inspiration Icon">
+        <span>I’m looking for design inspiration.</span>
+        <small>With over 7 million shots from vast community of designers, Dribbble is the leading source for design inspiration</small>
+        <div class="checkbox"></div>
+      </label>
+    </div>
+  </div>
+  <p class="choose-text">Choose what you are interested in!</p>
+
+  <button class="finish-button" onclick="window.location.href='email-validation.html';">Finish</button>
+  <p id="or-return-text" class="or-return-text" onclick="goToPreviousPage()">or press RETURN</p>
+
+</div>
+<script>
+  // JavaScript
+  function goToPreviousPage() {
+    window.location.href = 'profile-setup.html';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var options = document.querySelectorAll('.option');
+    var orReturnText = document.getElementById('or-return-text');
+    options.forEach(function(option) {
+      option.addEventListener('click', function() {
+        var smallText = this.querySelector('small');
+        var chooseText = document.querySelector('.choose-text');
+        // Check if the clicked option is already active
+        if (this.classList.contains('active')) {
+          setTimeout(() => {
+            this.classList.remove('active'); // Remove active class to deselect
+            smallText.style.display = 'none';
+            chooseText.style.display = 'none';
+            chooseText.style.opacity = '0'; // Hide additional text
+            orReturnText.style.display = 'none'; // Hide "or press RETURN" text
+          }, 100); // Delay of 100 milliseconds
+        } else {
+          // Remove active class from all options and hide their small text
+          options.forEach(function(opt) {
+            opt.classList.remove('active');
+            opt.querySelector('small').style.display = 'none';
+          });
+          setTimeout(() => {
+            // Add active class to clicked option and show its small text
+            this.classList.add('active');
+            smallText.style.display = 'block';
+            chooseText.style.display = 'block';
+            chooseText.style.opacity = '1'; // Show additional text
+            orReturnText.style.display = 'block'; // Show "or press RETURN" text
+          }, 100); // Delay of 100 milliseconds
+        }
+      });
+    });
+  });
+
+
+// JavaScript code here
+</script>
+</body>
+</html>

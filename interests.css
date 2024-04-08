@@ -1,0 +1,201 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+}
+
+.interests-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 48px;
+  margin: 0;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+
+  color: #ea4c89;
+  
+}
+.redirect-button {
+  position: fixed;
+    top: 35px;
+    left: 155px;
+    background-color: transparent;
+    border: solid whitesmoke;
+    border-radius: 8px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ea4c89;
+}
+.redirect-button:hover {
+  color: #ff7ab0;
+}
+.header h1 {
+  font-size: 34px;
+  font-weight: bolder;
+  color: #333;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+
+.header p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  white-space: nowrap;
+}
+
+.options {
+  margin-top: 100px;
+  display: flex;
+  
+  justify-content: space-between;
+  position: relative;
+}
+
+.options .option {
+  flex: 1;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  padding: 40px;
+  width: 320px;
+  margin-right: 100px;
+  
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+.options .option:first-child {
+  margin-right: 100px; /* Remove margin from the first option box */
+  margin-left: -200px; /* Shift the first option box to the leftmost position */
+}
+.options .option:last-child {
+  margin-right: -190px; /* Remove margin from the first option box */
+  margin-left: 1px; /* Shift the first option box to the leftmost position */
+}
+.options .option:hover, .options .option.active {
+  border-color: #ea4c89; /* Highlight color when hovered or active */
+}
+
+.options .option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  cursor: pointer;
+  position: relative;
+}
+
+.options .option label span {
+  font-weight: bold;
+}
+
+.options .option label img {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px;
+}
+
+.options .option input[type="radio"] {
+  display: none;
+}
+
+.choose-text{
+  font-weight: bolder;
+  margin-top: 40px;
+  display: none;
+  transition: opacity 0.8s ease;
+}
+.option.active .choose-text {
+  display: block;
+  opacity: 1; /* Show the text with smooth transition */
+}
+.finish-button {
+  background-color: #ea4c89;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 6px;
+  width: 25%;
+}
+.finish-button:hover {
+  opacity: 0.8;
+}
+.or-return-text {
+  display: none;/* Initially hide the text */
+  color: rgb(77, 76, 76); /* Set text color to dark grey */
+  font-weight: bold; /* Bold font */
+  margin-left: 0; /* Shift the text 150px to the left */
+  cursor: pointer; /* Change cursor to pointer */
+  /* Add underline on hover */
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  margin-top: 10px;
+  cursor: pointer;
+  align-self: center; /* Center the checkbox within the flex container */
+}
+
+.option input[type="radio"]:checked + label .checkbox {
+  background-color: #ea4c89;
+}
+
+.option small {
+  display: none;
+  color: #666;
+  font-size: smaller;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  
+  
+
+  
+  z-index: 1;
+}
+
+.option.active small {
+  display: block;
+}
+
+.option label {
+  position: relative;
+  transition: margin-top 0.3s;
+}
+
+.option.active label {
+  margin-top: -30px;
+}
+
+.option label img {
+  transition: margin-top 0.3s;
+}
+
+.option.active label img {
+  margin-top: -30px;
+}
+
+.option label span {
+  transition: margin-top 0.3s;
+}
+
+.option.active label span {
+  margin-top: -30px;
+}

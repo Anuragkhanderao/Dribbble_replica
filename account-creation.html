@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Creation - Dribbble</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<div class="container">
+    <div class="left-section">
+      <h1>dribbble</h1>
+      <p>Discover the world’s top Designers & Creatives.</p>
+      <!-- Replace 'illustration.png' with the path to your image file -->
+      <img src="C:\Users\anura\OneDrive\Desktop\replica\images\pic2.png" alt="Illustration" style="max-width: 100%;">
+      <P2 class="art-by">Art by <span class="underline">Peter Tarka</span></p2>
+     
+    </div>   
+    <div class="right-section">
+      <div class="signup-text">Sign up to Dribbble</div>
+
+      <form action="profile-setup.html" method="post">
+        <div class="input-row">
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="(6+ characters)" required>
+           
+          </div>
+        </div>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Creating an account means you’re okay with our <span class="bold-text">Terms of Service</span>, <span class="bold-text">Privacy</span>, and our default<span class="bold-text"> Notification Settings.</span></label>
+
+        <button type="submit">Create Account</button>
+              <div class="footer-text">This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</div>
+
+      </form>
+
+      <div class="signin-text">Already a member?<span class="navy">Sign in</span></div>
+    </div>
+
+   
+  </div>
+  
+  <script src="password-placeholder.js"></script>
+  <script src="captcha.js"></script> <!-- Include JavaScript file for CAPTCHA -->
+  <script src="checkbox-validation.js"></script>
+</body>
+</html>

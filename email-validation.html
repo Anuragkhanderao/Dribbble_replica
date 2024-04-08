@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Validation</title>
+<link rel="stylesheet" href="email-validation.css">
+<script>
+  // Function to get the query parameter value by name
+ 
+  function getQueryParam(param) {
+    var searchParams = new URLSearchParams(window.location.search);
+    return searchParams.get(param);
+  }
+
+  function setProfileImage() {
+    var profileImgSrc = getQueryParam('profileIcon');
+    if (profileImgSrc) {
+      document.getElementById('profileIcon').src = decodeURIComponent(profileImgSrc);
+    }
+  }
+
+  window.onload = setProfileImage;
+
+
+
+  // Function to handle the search on pressing Enter
+  function handleSearch(event) {
+    if (event.key === 'Enter') {
+      // Perform search operation here
+      alert('Search for: ' + event.target.value); // Placeholder for search functionality
+    }
+  }
+  function redirectToAccountCreation() {
+    window.location.href = 'account-creation.html';
+  }
+</script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">dribbble</div>
+    <ul class="nav-links">
+      <li><a href="#">Inspiration</a></li>
+      <li><a href="#">Find Work</a></li>
+      <li><a href="#">Learn Design</a></li>
+      <li><a href="#">Go Pro</a></li>
+      <li><a href="#">Hire Designers</a></li>
+    </ul>
+    <!-- Search bar added here -->
+    <div class="search-container">
+      <input type="text" placeholder="Search..." name="search" onkeypress="handleSearch(event)">
+    </div>
+    <div class="icons">
+      <img class="icon" src="C:\Users\anura\OneDrive\Desktop\replica\images\mail_logo2.png" alt="Search" style="width: 26px; height: 26px;">
+      <img id="profileIcon" class="icon" src="C:\Users\anura\OneDrive\Desktop\replica\images\mail_logo.jpg" alt="Profile" style="width: 26px; height: 26px;">
+      <button class="upload-button" onclick="redirectToAccountCreation()">Upload</button>
+    </div>
+  </div>
+  <div class="email-verification-container">
+    <h1>Please verify your email...</h1>
+    <img src="C:\Users\anura\OneDrive\Desktop\replica\images\mail_logo1.png" alt="Dribbble Logo" class="email-verification-logo" style="width:200px; height:150px;">
+    <p>Please verify your email address. We’ve sent a confirmation email to:</p>
+    <p class="email-address">account@refero.design</p>
+    <p>Click the confirmation link in that email to begin using Dribbble.</p>
+    <p>Didn’t receive the email? Check your Spam folder; it may have been caught by a filter. If you still don’t see it, you can <a href="#" class="resend-email">resend the confirmation email</a>.</p>
+    <p class="wrong-email">Wrong email address? <a href="#" class="change-email" onclick="redirectToAccountCreation()">Change it</a>.</p>
+  </div>
+  <!-- Footer Section -->
+  <footer class="footer-dribbble">
+    <div class="footer-container">
+      <!-- For Designers Column -->
+      <div class="footer-column">
+        <h1>Dribbble</h1>
+        <p>Dribbble is the world’s leading community for creatives to share, grow, and get hired.</p>
+        <!-- Social media icons -->
+        <a href="https://www.facebook.com/dribbble/" target="_blank"><img src="C:\Users\anura\OneDrive\Desktop\replica\images\fb_logo.png" alt="Facebook" style="width: 44px; height:44px;"></a>
+      <a href="https://twitter.com/dribbble?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="C:\Users\anura\OneDrive\Desktop\replica\images\twitter_logo.png" alt="Twitter" style="width: 44px; height:44px;"></a>
+      <a href="https://www.instagram.com/dribbble/?hl=en" target="_blank"><img src="C:\Users\anura\OneDrive\Desktop\replica\images\insta_logo.jpg" alt="Instagram" style="width: 44px; height:44px;"></a>
+      </div>
+      <div class="footer-column">
+        <h3>For designers</h3>
+        <ul>
+          <li><a href="#">Go Pro!</a></li>
+          <li><a href="#">Explore design work</a></li>
+          <li><a href="#">Design blog</a></li>
+          <li><a href="#">Overtime podcast</a></li>
+          <li><a href="#">Playoffs</a></li>
+          <li><a href="#">Weekly Warm-Up</a></li>
+          <li><a href="#">Refer a Friend</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+          <!-- Add more list items here -->
+        </ul>
+      </div>
+  
+      <!-- Hire Designers Column -->
+      <div class="footer-column">
+        <h3>Hire designers</h3>
+        <ul>
+          <li><a href="#">Post a job opening</a></li>
+          <li><a href="#">Post a freelance project</a></li>
+          <li><a href="#">Search for designers</a></li>
+          <!-- Add more list items here -->
+        </ul>
+        <!-- Brands Column -->
+        <div class="footer-sub-column">
+          <h4>Brands</h4>
+          <ul>
+            <li><a href="#">Advertise with us</a></li>
+            <!-- Add more brand-related items here -->
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Company Column -->
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Media Kit</a></li>
+          <li><a href="#">Testimonial</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <!-- Add more list items here -->
+        </ul>
+      </div>
+  
+      <!-- Directories Column -->
+      <div class="footer-column">
+        <h3>Directories</h3>
+        <ul>
+          <li><a href="#">Design jobs</a></li>
+          <li><a href="#">Designers for hire</a></li>
+          <li><a href="#">Freelance designers for hire</a></li>
+          <li><a href="#">Tags</a></li>
+          <li><a href="#">Places</a></li>
+          <!-- Add more list items here -->
+        </ul>
+        <!-- Design Assets Column -->
+        <div class="footer-sub-column">
+          <h4>Design Assets</h4>
+          <ul>
+            <li><a href="#">Dribbble Marketplace</a></li>
+            <li><a href="#">Creative Market</a></li>
+            <li><a href="#">Fontspring</a></li>
+            <li><a href="#">Font Squirrel</a></li>
+            <!-- Add more design asset items here -->
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Design Resources Column -->
+      <div class="footer-column">
+        <h3>Design Resources</h3>
+        <ul>
+          <li><a href="#">Freelancing</a></li>
+          <li><a href="#">Design Hiring</a></li>
+          <li><a href="#">Design portfolio</a></li>
+          <li><a href="#">Design Education</a></li>
+          <li><a href="#">Creative Process</a></li>
+          <li><a href="#">Design Industry Trends</a></li>
+          
+          
+          <!-- Add more list items here -->
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div>
+        <p>© 2023 Dribbble. All rights reserved.</p>
+        
+      </div>
+      <div class="second-text-container">
+        <p>20,501,583 shots dribbbled</p>
+        <img class="icon" src="C:\Users\anura\OneDrive\Desktop\replica\images\bb_logo1.webp" alt="logo" style="width: 26px; height: 26px;">
+      </div>
+    </div>
+    
+  </footer>
+  
+  </body>
+  </html>

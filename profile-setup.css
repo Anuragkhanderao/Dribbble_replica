@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff; /* Light pink background */
+}
+
+.profile-setup-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.logo {
+  font-family: 'Brush Script MT', cursive; /* Stylish font for the logo */
+  font-size: 48px;
+  margin-bottom: 20px;
+  margin-right: 1300px;
+  color: #ea4c89;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  color: #666;
+  margin-bottom: 30px;
+  margin-right: 120px;
+}
+
+.avatar-section {
+  margin-bottom: 30px;
+}
+
+.avatar-placeholder {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px dashed #ada9a9;
+  margin-bottom: 10px;
+  margin-right: 400px;
+  margin-top: 10px;
+}
+
+.choose-image-btn {
+  display: block;
+  width: 120px;
+  font-weight: bold;
+  margin: -120px auto 20px calc(48% - 60px);
+  padding: 6px 12px;
+  background-color: #e1c8d3; /* Pink button */
+  color: rgb(10, 10, 10);
+  border: grey;
+  cursor: pointer;
+}
+
+.default-avatar-text {
+  color: #ada9a9;
+}
+
+.location-section {
+  margin-top: 100px;
+  text-align: left;
+  font-weight: bolder;
+  font-size: larger;
+  margin-left: 31%;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #fff;
+  font-size: large;
+  width: 60%; /* Adjusted width to fill the container */
+  margin-top: 10px;
+  border-bottom: 1px solid #ada9a9;
+}
+
+.next-button {
+  padding: 10px 20px;
+  background-color: #ea4c89; /* Pink button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 45px;
+  margin-right: 380px;
+  width: 12%;
+  border-radius: 5px;
+}
+.next-button:hover {
+  opacity: 0.8;
+}
+
+.add-avatar-text {
+  color: #333; /* Adjust color as needed */
+  margin-right: 400px;
+  font-weight: bolder;
+  font-size: larger;
+  margin-top: 30px;
+}
+
+.selected-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%; /* Ensure the image fits within the container */
+  max-height: 100%; /* Ensure the image fits within the container */
+}
+.or-return-text {
+  display: flex; /* Initially hide the text */
+  color: rgb(32, 24, 24); /* Set text color to dark grey */
+  font-weight: bold; /* Bold font */
+  margin-left: -410px; /* Shift the text 150px to the left */
+  cursor: pointer; /* Change cursor to pointer */
+   /* Add underline on hover */
+}
+.redirect-button {
+  position: fixed;
+    top: 55px;
+    left: 195px;
+    background-color: transparent;
+    border: solid whitesmoke;
+    border-radius: 8px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ea4c89;
+}
+.redirect-button:hover {
+  color: #ff7ab0;
+}
