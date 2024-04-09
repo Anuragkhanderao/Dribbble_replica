@@ -290,10 +290,10 @@ body {
   }
 
   .or-return-text {
-    margin-left:80px;
+    margin-left:90px;
     display: none; /* Hide the "or press RETURN" text on mobile */
   }
   .choose-text{
-    margin-left:80px;
+    margin-left:100px;
   }
 }
