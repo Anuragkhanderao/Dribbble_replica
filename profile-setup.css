@@ -132,3 +132,58 @@ input[type="text"] {
 .redirect-button:hover {
   color: #ff7ab0;
 }
+/* Additional Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+  .logo {
+    font-size: 36px; /* Decrease font size for the logo */
+    margin-right: 0; /* Remove right margin */
+  }
+  
+  .redirect-button {
+    left: 20px; /* Adjust left position */
+  }
+  
+  .intro-text {
+    margin-right: 0; /* Remove right margin */
+  }
+  
+  .avatar-placeholder {
+    margin-right: auto; /* Center the avatar placeholder */
+    margin-left: auto;
+  }
+  
+  .choose-image-btn {
+    margin: 10px auto; /* Center the choose image button */
+  }
+  
+  .add-avatar-text {
+    margin-right: auto; /* Center the add avatar text */
+    margin-left: auto;
+  }
+  
+  .location-section {
+    margin-left: auto; /* Center the location section */
+    margin-right: auto;
+    width: 80%; /* Adjust width */
+  }
+  
+  input[type="text"] {
+    width: 100%; /* Make text input full width */
+  }
+  
+  .next-button {
+    margin: 20px auto; /* Center the next button */
+    width: 80%; /* Adjust width */
+  }
+  
+  .or-return-text {
+    margin-left: auto; /* Center the or return text */
+    margin-right: auto;
+    margin-bottom: 20px; /* Add some bottom margin */
+  }
+  
+  .redirect-button {
+    top: 20px; /* Adjust top position */
+    left: 20px; /* Adjust left position */
+  }
+}
