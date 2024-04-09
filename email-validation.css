@@ -237,3 +237,80 @@ body {
   padding: 8px; /* Add padding for better visual appearance */
   border-radius: 8px;
 }
+/* Additional Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 10px; /* Reduce padding for smaller screens */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+  }
+
+  .nav-links {
+    margin-top: 10px; /* Add space between logo and nav links */
+  }
+
+  .nav-links li {
+    margin-left: 0; /* Reset margin for list items */
+    padding: 10px; /* Increase padding for better touchability */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .search-container {
+    margin: 10px 0; /* Add space around the search bar */
+  }
+
+  .search-container input[type="text"] {
+    width: 100%; /* Take full width */
+  }
+
+  .icons {
+    margin-top: 10px; /* Add space between search bar and icons */
+  }
+
+  .email-verification-container {
+    padding: 20px; /* Adjust padding */
+  }
+
+  .email-verification-logo {
+    width: 150px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Add margin */
+    margin-bottom: 20px; /* Add margin */
+  }
+
+  .email-verification-container p {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .footer-column {
+    min-width: auto; /* Reset minimum width */
+    max-width: 100%; /* Take full width */
+    margin-bottom: 30px; /* Adjust margin */
+  }
+
+  .footer-column h1 {
+    font-size: 24px; /* Adjust font size */
+  }
+
+  .footer-sub-column {
+    margin-top: 10px; /* Adjust margin */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+    margin-top: 20px; /* Adjust margin */
+  }
+
+  .second-text-container {
+    margin-top: 10px; /* Add space between text and image */
+  }
+
+  .footer-bottom p {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .upload-button {
+    width: 100%; /* Take full width */
+  }
+}
