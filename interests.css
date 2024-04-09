@@ -203,7 +203,7 @@ body {
 @media only screen and (max-width: 600px) {
   .logo {
     font-size: 24px; /* Decrease font size for the logo */
-    left: 50%; /* Adjust left position */
+    left: 40%; /* Adjust left position */
     transform: translateX(-50%);
   }
 
