@@ -18,7 +18,7 @@
     <div class="right-section">
       <div class="signup-text">Sign up to Dribbble</div>
 
-      <form action="profile-setup.html" method="post">
+      <form action="profile-setup.html" method="get">
         <div class="input-row">
           <div class="input-group">
             <label for="name">Name</label>
@@ -45,7 +45,7 @@
         <input type="checkbox" id="terms" name="terms" required>
         <label for="terms">Creating an account means you’re okay with our <span class="bold-text">Terms of Service</span>, <span class="bold-text">Privacy</span>, and our default<span class="bold-text"> Notification Settings.</span></label>
 
-        <button type="submit" onClick="goToNextPage()">Create Account</button>
+        <button type="submit" >Create Account</button>
               <div class="footer-text">This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</div>
 
       </form>
@@ -59,10 +59,6 @@
   <script src="password-placeholder.js"></script>
   <script src="captcha.js"></script> <!-- Include JavaScript file for CAPTCHA -->
   <script src="checkbox-validation.js"></script>
-    <script>
-        function goToNextPage(){
-            window.location.href="profile-setup.html";
-        }
-    </script>
+    
 </body>
 </html>
