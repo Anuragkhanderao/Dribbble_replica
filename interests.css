@@ -216,12 +216,15 @@ body {
   .header h1 {
     font-size: 24px; /* Maintain font size for the heading */
     margin-top: 20px; /* Adjust top margin */
+    left: 50%; /* Adjust left position */
+    
   }
 
   .header p {
     font-size: 14px; /* Decrease font size for the paragraph */
     margin-bottom: 20px; /* Adjust bottom margin */
     margin-top: 10px; /* Adjust top margin */
+    left: 50%;
   }
 
   .options {
@@ -272,7 +275,7 @@ body {
 }
   .finish-button {
     width: calc(100% - 40px); /* Adjust width to fit container */
-    margin-left: 20px; /* Adjust left margin */
+    margin-left: 40px; /* Adjust left margin */
     border-radius: 8px; /* Adjust border radius */
     background-color: #ea4c89; /* Pink button background color */
     color: #ffffff; /* Text color */
