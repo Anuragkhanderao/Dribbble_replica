@@ -199,3 +199,94 @@ body {
 .option.active label span {
   margin-top: -30px;
 }
+/* Additional Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+  .logo {
+    font-size: 24px; /* Decrease font size for the logo */
+    left: 50%; /* Adjust left position */
+    transform: translateX(-50%);
+  }
+
+  .redirect-button {
+    top: 25px; /* Adjust top position */
+    left: 15px; /* Adjust left position */
+    font-size: 24px; /* Increase font size for the button */
+  }
+
+  .header h1 {
+    font-size: 24px; /* Maintain font size for the heading */
+    margin-top: 20px; /* Adjust top margin */
+  }
+
+  .header p {
+    font-size: 14px; /* Decrease font size for the paragraph */
+    margin-bottom: 20px; /* Adjust bottom margin */
+    margin-top: 10px; /* Adjust top margin */
+  }
+
+  .options {
+    display: block; /* Change to block display for options */
+    margin-top: 20px; /* Add top margin for spacing */
+  }
+
+
+  .option {
+    margin-bottom: 40px; /* Add bottom margin to options for spacing */
+    border-radius: 8px; /* Adjust border radius for a softer look */
+    padding: 20px; /* Increase padding for better spacing */
+    width: calc(120% - 40px); /* Adjust width to fit container */
+    margin-left: 20px; /* Adjust left margin */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle box shadow */
+    background-color: #ffffff; /* Set background color */
+  }
+  .option label img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Adjust margin for image */
+  }
+
+  .option span {
+    font-weight: bold;
+    margin-bottom: 10px; /* Add margin below the text */
+    max-width: 100%;
+    overflow-wrap: break-word; /* Prevent text overflow */
+    word-wrap: break-word; /* For older browser compatibility */
+  }
+
+  .option small {
+    display: none;
+    color: #666;
+    font-size: smaller;
+    margin-top: 5px; /* Add margin top */
+    max-width: 100%;
+    overflow-wrap: break-word; /* Prevent text overflow */
+    word-wrap: break-word; /* For older browser compatibility */
+  }
+
+
+  .options .option:first-child {
+    margin-left: 20px; /* Adjust left margin for the first option */
+  }
+.options .option:last-child{
+  margin-left: 20px;
+}
+  .finish-button {
+    width: calc(100% - 40px); /* Adjust width to fit container */
+    margin-left: 20px; /* Adjust left margin */
+    border-radius: 8px; /* Adjust border radius */
+    background-color: #ea4c89; /* Pink button background color */
+    color: #ffffff; /* Text color */
+    font-size: 16px; /* Font size */
+    padding: 15px 0; /* Increase padding */
+    cursor: pointer; /* Change cursor style */
+    transition: background-color 0.3s ease; /* Add smooth transition */
+  }
+
+  .finish-button:hover {
+    background-color: #ff7ab0; /* Change background color on hover */
+  }
+
+  .or-return-text {
+    display: none; /* Hide the "or press RETURN" text on mobile */
+  }
+}
