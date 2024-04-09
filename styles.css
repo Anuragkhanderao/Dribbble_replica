@@ -140,7 +140,7 @@ body {
   }
   .signup-text {
     position: relative;
-    top: 20px;
+    top: 0;
     left: 100px;
     font-weight: bolder;
     color: black;
