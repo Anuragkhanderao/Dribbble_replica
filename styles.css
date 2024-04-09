@@ -141,7 +141,7 @@ body {
   .signup-text {
     position: relative;
     top: 0;
-    left: 100px;
+    left: 0 px;
     font-weight: bolder;
     color: black;
    margin-bottom: 600px;
@@ -158,9 +158,9 @@ body {
   /* Right Section Text Styles */
   .signin-text {
     position: relative;
-    top: 20px;
-    right: 20px;
-    margin-bottom: 680px;
+    top: 0 px;
+    right: 20 px;
+    margin-bottom: 680 px;
     text-align: right;
     width: calc(100% - 40px);
   }
