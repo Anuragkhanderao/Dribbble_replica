@@ -216,7 +216,7 @@ body {
   .header h1 {
     font-size: 24px; /* Maintain font size for the heading */
     margin-top: 20px; /* Adjust top margin */
-    left: 50%; /* Adjust left position */
+    margin-left:80px; /* Adjust left position */
     
   }
 
