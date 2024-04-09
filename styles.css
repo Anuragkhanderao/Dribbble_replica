@@ -267,6 +267,6 @@ background-color: #8640d0; /* Adjust background color when checked */
   .signin-text {
       position: static;
       text-align: right;
-      margin-top: 20px;
+      margin-top: 10px;
       margin-right: 15px;
   }
