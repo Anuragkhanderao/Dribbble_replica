@@ -275,7 +275,7 @@ body {
 }
   .finish-button {
     width: calc(100% - 40px); /* Adjust width to fit container */
-    margin-left: 40px; /* Adjust left margin */
+    margin-left: 80px; /* Adjust left margin */
     border-radius: 8px; /* Adjust border radius */
     background-color: #ea4c89; /* Pink button background color */
     color: #ffffff; /* Text color */
