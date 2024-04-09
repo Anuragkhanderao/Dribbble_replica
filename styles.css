@@ -71,7 +71,7 @@ form {
 .input-group {
   
   flex: 1;
-  
+  margin-top: 5px;
   margin-right: 10px;
 }
 
@@ -98,15 +98,26 @@ form {
   background-color: whitesmoke;
 }
 .input-group input[type="email"] {
-  width: calc(100% - 5px); /* Adjust the width */
-  padding: 12px; /* Keep the padding */
-  margin-top: 5px; /* Keep the margin */
-  margin-bottom: 10px; /* Keep the margin */
-  border: none; /* Remove the border */
-  background-color: whitesmoke; /* Set background color */
-  border-radius: 4px; /* Keep the border-radius */
-  box-sizing: border-box; /* Keep the box-sizing */
+  width: calc(100% - 5px);
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
+.input-group input[type="text"] {
+  width: calc(100% - 5px);
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .input-group label[for="password"]{
   display: block;
   margin-bottom: 5px;
@@ -141,11 +152,13 @@ button:hover {
 .signup-text {
   position: relative;
   top: 0;
-  left: 0;
+  left: 140px;
   font-weight: bolder;
+  
   color: black;
  margin-bottom: 600px;
   font-size: x-large;
+  width: calc(40% - 40px);
 }
 .input-row {
 position: relative;
@@ -157,9 +170,10 @@ color: grey;
 }
 /* Right Section Text Styles */
 .signin-text {
-  position: relative;
-  top: 0;
-  right: 20px;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  margin-right: -260px;
   margin-bottom: 680px;
   text-align: right;
   width: calc(100% - 40px);
@@ -228,7 +242,8 @@ background-color: #8640d0; /* Adjust background color when checked */
   .signup-text {
     position: static;
     text-align: center;
-    margin-top: -70px;
+    margin-top: -80px;
+    margin-right: 10px;
 }
   }
   .input-row {
@@ -237,7 +252,7 @@ background-color: #8640d0; /* Adjust background color when checked */
   }
 
   .input-group {
-      width: 100%;
+      width: 120%;
       margin-right: 0;
   }
 
@@ -246,11 +261,12 @@ background-color: #8640d0; /* Adjust background color when checked */
   }
 
   button {
-      width: 100%;
+      width: 120%;
   }
 
   .signin-text {
       position: static;
-      text-align: center;
+      text-align: right;
       margin-top: 20px;
+      margin-right: 15px;
   }
